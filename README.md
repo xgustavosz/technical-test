@@ -19,7 +19,7 @@ Neste desafio você irá desenvolver uma plataforma de marketplace.
 Estamos disponibilizando o figma do projeto para ser seguido. 
 
 ### O que nós esperamos do seu teste.
-- Ver na solução a utilização do **NextJs** no frontend e do **NestJS** ou **Fastify** no backend.
+- Ver na solução a utilização do **NextJs** no frontend e do **NestJS** ou **Fastify** ou **Express** no backend.
 - Um HTML escrito da maneira mais semântica possível.
 - Layout responsivo.
 
