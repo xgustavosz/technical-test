@@ -13,7 +13,7 @@ Este teste foi projetado para avaliar suas habilidades em React e Next. O objeti
 **Observação**
 Estamos disponibilizando o figma do projeto para ser seguido: 
 
-[Clique aqui para acessar](https://www.figma.com/file/t3XDiGItGX4GAHtGavTT25/E-commerce-FLOW?type=design&node-id=0%3A1&mode=design&t=f013LDpyzTW6HN55-1)
+[Clique aqui para acessar](https://www.figma.com/design/t3XDiGItGX4GAHtGavTT25/E-commerce-FLOW?node-id=0-1&t=jhTM13489cfiVXfI-1)
 
 O protótipo é navegável, através dele você conseguirá ver todo o fluxo.
 
