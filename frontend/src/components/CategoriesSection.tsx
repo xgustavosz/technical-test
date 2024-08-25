@@ -21,8 +21,8 @@ export default function CategoriesSection() {
     };
 
     return (
-        <div className="w-full max-w-[290px] min-h-[424px] p-4 gap-2 bg-[#F9FAFB] rounded-t-lg">
-            <div className="w-full max-w-[258px] h-auto min-h-[392px] rounded-lg p-4 gap-4 bg-white">
+        <div className="w-full max-w-[290px] sm:min-h-[424px] p-4 gap-2 bg-[#F9FAFB] rounded-t-lg">
+            <div className="w-full max-w-[258px] h-auto sm:min-h-[392px] rounded-lg p-4 gap-4 bg-white">
                 <p className="font-semibold mb-4 text-base sm:text-lg">Categorias</p>
                 <SearchButton />
                 <div className="flex flex-col gap-4 mt-4">
