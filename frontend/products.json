@@ -1,0 +1,58 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "category": "Tênis Social",
+            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
+            "originalPrice": "R$ 8.999,00",
+            "discountedPrice": "R$ 270,00",
+            "discountPercentage": "10",
+            "imageSrc": "/images/itemProduct.jpg"
+        },
+        {
+            "id": "2",
+            "category": "Tênis Social",
+            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
+            "originalPrice": "R$ 8.999,00",
+            "discountedPrice": "R$ 270,00",
+            "discountPercentage": "10",
+            "imageSrc": "/images/itemProduct.jpg"
+        },
+        {
+            "id": "3",
+            "category": "Tênis Social",
+            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
+            "originalPrice": "R$ 8.999,00",
+            "discountedPrice": "R$ 270,00",
+            "discountPercentage": "10",
+            "imageSrc": "/images/itemProduct.jpg"
+        },
+        {
+            "id": "4",
+            "category": "Tênis Social",
+            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
+            "originalPrice": "R$ 8.999,00",
+            "discountedPrice": "R$ 270,00",
+            "discountPercentage": "10",
+            "imageSrc": "/images/itemProduct.jpg"
+        },
+        {
+            "id": "5",
+            "category": "Tênis Social",
+            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
+            "originalPrice": "R$ 8.999,00",
+            "discountedPrice": "R$ 270,00",
+            "discountPercentage": "10",
+            "imageSrc": "/images/itemProduct.jpg"
+        },
+        {
+            "id": "6",
+            "category": "Tênis Social",
+            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
+            "originalPrice": "R$ 8.999,00",
+            "discountedPrice": "R$ 270,00",
+            "discountPercentage": "10",
+            "imageSrc": "/images/itemProduct.jpg"
+        }
+    ]
+}
