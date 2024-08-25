@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link
               key={item.href}
               href={item.href}
-              className="flex items-center text-gray-500 hover:text-[#FF7600] space-x-2"
+              className="flex items-center text-gray-500 hover:text-primary-orange space-x-2"
             >
               <Image src={item.iconSrc} alt={item.iconAlt} width={13} height={12} />
               <span>{item.label}</span>
