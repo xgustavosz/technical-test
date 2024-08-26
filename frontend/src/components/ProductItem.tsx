@@ -1,5 +1,6 @@
 'use client';
 
+import { useCart } from '@/contexts/CartContext';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
@@ -23,6 +24,20 @@ export default function ProductItem({
     discountPercentage,
 }: ProductItemProps) {
     const router = useRouter();
+    const { addItem } = useCart();
+
+    const handleAddToCart = () => {
+      addItem({
+        id,
+        category,
+        description,
+        originalPrice,
+        discountedPrice,
+        discountPercentage,
+        imageSrc,
+        quantity: 1,
+      });
+    };
 
     const handleClick = () => {
         router.push(`/product/${id}`);
@@ -30,6 +45,7 @@ export default function ProductItem({
 
     const handleAddToCartClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.stopPropagation();
+        handleAddToCart();
         console.log(`Produto ${id} adicionado ao carrinho`);
     };
 
