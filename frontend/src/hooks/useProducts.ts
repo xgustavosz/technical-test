@@ -27,12 +27,7 @@ export function useProducts() {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
 
-        const data: Product[] = await res.json();
-
-        if (!data || data.length === 0) {
-          throw new Error("No products found in the response");
-        }
-
+        const data = await res.json();
         setProducts(data);
       } catch (error: any) {
         setError(error.message);
@@ -42,5 +37,9 @@ export function useProducts() {
     fetchProducts();
   }, []);
 
-  return { products, error };
+  const getProductById = (id: string) => {
+    return products.find(product => product.id === id);
+  };
+
+  return { products, error, getProductById };
 }
