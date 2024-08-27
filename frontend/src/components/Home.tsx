@@ -68,7 +68,7 @@ export default function HomePage({ products }: HomePageProps) {
             <Image src="/images/banner.jpg" alt="Banner" width={1440} height={320} />
             <div className="sm:px-4 md:px-6 xl:px-[104px] pb-6">
                 <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center mt-12">
-                    <p className="font-semibold text-base sm:text-lg">{formatProductCount(filteredProducts.length)} items found</p>
+                    <p className="font-semibold text-base sm:text-lg">{formatProductCount(filteredProducts.length)} itens encontrados</p>
                     <SearchInput onSearch={handleSearch} />
                 </div>
                 <div className="flex flex-col sm:flex-row mt-12 gap-6">
