@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Modal from "@/components/Modal";
 import { useAuth } from '@/contexts/AuthContext';
 import toast from 'react-hot-toast';
+import PasswordInput from '@/components/PasswordInput';
 
 interface ModalProps {
     isOpen: boolean;
@@ -72,12 +73,11 @@ export default function RegisterModal({ isOpen, onClose }: ModalProps) {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                 />
-                <input
-                    type="password"
+                <PasswordInput
                     placeholder="Senha"
-                    className="border rounded-[4px] w-full h-12 px-3"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    className="w-full"
                 />
             </div>
         </Modal>
