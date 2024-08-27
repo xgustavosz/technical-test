@@ -2,56 +2,56 @@
     "products": [
         {
             "id": "1",
-            "category": "Tênis Social",
-            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
-            "originalPrice": "R$ 8.999,00",
+            "category": "Botas",
+            "description": "Tênis Casual Masculino Branco FLOW",
+            "originalPrice": "R$ 299,00",
             "discountedPrice": "R$ 270,00",
             "discountPercentage": "10",
-            "imageSrc": "/images/itemProduct.jpg"
+            "imageSrc": "/images/itemProduct01.jpg"
         },
         {
             "id": "2",
-            "category": "Tênis Social",
-            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
-            "originalPrice": "R$ 8.999,00",
-            "discountedPrice": "R$ 270,00",
+            "category": "Chinelos",
+            "description": "Chinelo Confortável para o Dia a Dia",
+            "originalPrice": "R$ 99,00",
+            "discountedPrice": "R$ 89,00",
             "discountPercentage": "10",
             "imageSrc": "/images/itemProduct.jpg"
         },
         {
             "id": "3",
-            "category": "Tênis Social",
-            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
-            "originalPrice": "R$ 8.999,00",
-            "discountedPrice": "R$ 270,00",
-            "discountPercentage": "10",
-            "imageSrc": "/images/itemProduct.jpg"
+            "category": "Chinelos",
+            "description": "Chinelo Esportivo para Caminhadas e Corridas",
+            "originalPrice": "R$ 129,00",
+            "discountedPrice": "R$ 103,00",
+            "discountPercentage": "20",
+            "imageSrc": "/images/itemProduct02.jpg"
         },
         {
             "id": "4",
-            "category": "Tênis Social",
-            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
-            "originalPrice": "R$ 8.999,00",
-            "discountedPrice": "R$ 270,00",
-            "discountPercentage": "10",
-            "imageSrc": "/images/itemProduct.jpg"
+            "category": "Sandálias",
+            "description": "Sandália Feminina Preta para o Verão",
+            "originalPrice": "R$ 179,00",
+            "discountedPrice": "",
+            "discountPercentage": "",
+            "imageSrc": "/images/itemProduct01.jpg"
         },
         {
             "id": "5",
-            "category": "Tênis Social",
-            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
-            "originalPrice": "R$ 8.999,00",
-            "discountedPrice": "R$ 270,00",
+            "category": "Sandálias",
+            "description": "Sandália Casual para Festas e Eventos",
+            "originalPrice": "R$ 249,00",
+            "discountedPrice": "R$ 224,00",
             "discountPercentage": "10",
-            "imageSrc": "/images/itemProduct.jpg"
+            "imageSrc": "/images/itemProduct02.jpg"
         },
         {
             "id": "6",
-            "category": "Tênis Social",
-            "description": "Sapatenis Masculino Branco Tênis Casual FLOW para Di...",
-            "originalPrice": "R$ 8.999,00",
-            "discountedPrice": "R$ 270,00",
-            "discountPercentage": "10",
+            "category": "Sandálias",
+            "description": "Sandália Branca Clássica para o Dia a Dia",
+            "originalPrice": "R$ 219,00",
+            "discountedPrice": "",
+            "discountPercentage": "",
             "imageSrc": "/images/itemProduct.jpg"
         }
     ]
