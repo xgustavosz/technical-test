@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react';
 import { Range, getTrackBackground } from 'react-range';
 
 export default function PriceSection({ onPriceChange }: { onPriceChange: (values: number[]) => void }) {
-    const [values, setValues] = useState([0, 10000]);
+    const [values, setValues] = useState([0, 1000]);
     const MIN = 0;
-    const MAX = 10000;
+    const MAX = 1000;
 
     useEffect(() => {
         onPriceChange(values);
