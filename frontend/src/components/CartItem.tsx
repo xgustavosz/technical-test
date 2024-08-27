@@ -34,18 +34,18 @@ export default function CartItem({ item }: CartItemProps) {
     };
 
     return (
-        <div className="flex items-start gap-10 max-w-[808px] mt-[21px]">
+        <div className="flex items-start gap-5 md:gap-10 max-w-[808px] mt-[21px]">
             <Image
                 src={item.imageSrc}
                 alt={`Imagem do produto ${item.description}`}
-                width={150}
-                height={150}
-                className="rounded-lg"
+                width={120}
+                height={120}
+                className="rounded-lg md:w-[150px] md:h-[150px]"
             />
             <div className="w-full">
-                <p className="font-medium text-2xl">{item.description}</p>
+                <p className="font-medium text-xl md:text-2xl">{item.description}</p>
                 <div className="flex items-center justify-between mt-3">
-                    <p className="font-semibold text-[1.75rem]">{item.discountedPrice || item.originalPrice}</p>
+                    <p className="font-semibold  text-xl md:text-[1.75rem]">{item.discountedPrice || item.originalPrice}</p>
 
                     <div className="flex gap-3">
                         <button

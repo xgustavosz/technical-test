@@ -29,7 +29,8 @@ export default function CartDetails({ cart, onCheckout }: CartDetailsProps) {
             className="
             flex
             flex-col
-            w-[384px]
+            lg:w-[384px]
+            w-full
             border
             border-gray-200
             rounded-[4px]
