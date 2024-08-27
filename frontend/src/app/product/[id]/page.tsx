@@ -5,11 +5,13 @@ import { useParams } from 'next/navigation';
 import { Product } from '@/hooks/useProducts';
 import Image from 'next/image';
 import Container from '@/components/Container';
+import { useCart } from '@/contexts/CartContext';
 
 export default function ProductDetail() {
     const { id } = useParams();
     const [product, setProduct] = useState<Product | null>(null);
     const [error, setError] = useState<string | null>(null);
+    const { addItem } = useCart();
 
     useEffect(() => {
         async function fetchProduct() {
@@ -29,6 +31,22 @@ export default function ProductDetail() {
 
         fetchProduct();
     }, [id]);
+
+    const handleAddToCart = () => {
+        if (product) {
+            addItem({
+                id: product.id,
+                category: product.category,
+                description: product.description,
+                originalPrice: product.originalPrice,
+                discountedPrice: product.discountedPrice,
+                discountPercentage: product.discountPercentage,
+                imageSrc: product.imageSrc,
+                quantity: 1,
+            });
+            console.log(`Produto ${product.id} adicionado ao carrinho`);
+        }
+    };
 
     if (error) {
         return <div>Error: {error}</div>;
@@ -76,6 +94,7 @@ export default function ProductDetail() {
                         </div>
                     </div>
                     <button
+                        onClick={handleAddToCart}
                         className="mt-[52px] w-full h-12 rounded text-xs sm:text-sm md:text-base text-white bg-primary-orange hover:opacity-90 transition-opacity duration-200"
                     >
                         Adicionar ao carrinho
