@@ -1,13 +1,23 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
-const Navbar = () => {
+export default function Navbar() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/cart`);
+  };
+
   const menuItems = [
     {
       href: '/cart',
       iconSrc: '/cart.svg',
       iconAlt: 'Carrinho',
       label: 'Carrinho',
+      onClick: () => handleClick(),
     },
     {
       href: '/checkout',
@@ -30,9 +40,10 @@ const Navbar = () => {
             <Link
               key={item.href}
               href={item.href}
+              onClick={item.onClick}
               className="flex items-center text-gray-500 hover:text-primary-orange space-x-2"
             >
-              <Image src={item.iconSrc} alt={item.iconAlt} width={13} height={12} />
+              <Image src={item.iconSrc} alt={item.iconAlt} width={13} height={13} />
               <span>{item.label}</span>
             </Link>
           ))}
@@ -40,6 +51,4 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
