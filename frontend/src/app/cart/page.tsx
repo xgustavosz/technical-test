@@ -33,7 +33,7 @@ export default function Cart() {
 
     return (
         <Container>
-            <div className="flex items-start justify-between gap-10 my-[42px]">
+            <div className="flex flex-col-reverse lg:flex-row items-start justify-between gap-10 px-5 my-[42px]">
                 <div>
                     {cart.length > 0 ? (
                         cart.map((item) => (
