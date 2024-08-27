@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 import { useAuth } from '@/contexts/AuthContext';
+import PasswordInput from '@/components/PasswordInput';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -42,12 +43,11 @@ export default function LoginPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <input
-            type="password"
+          <PasswordInput
             placeholder="Senha"
-            className="border rounded-[4px] w-full h-12 px-3"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="w-full"
           />
           <button
             onClick={handleLogin}
