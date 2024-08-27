@@ -4,13 +4,14 @@ import React from 'react';
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
+    onConfirm?: () => void;
     title: string;
     titleIcon?: string;
     buttonTitle?: string;
     children: React.ReactNode;
 }
 
-export default function Modal({ isOpen, onClose, title, children, buttonTitle, titleIcon }: ModalProps) {
+export default function Modal({ isOpen, onClose, onConfirm, title, children, buttonTitle, titleIcon }: ModalProps) {
     if (!isOpen) return null;
 
     return (
@@ -18,7 +19,7 @@ export default function Modal({ isOpen, onClose, title, children, buttonTitle, t
             <div className="bg-white p-6 rounded-lg shadow-lg w-[384px]">
                 <div className="flex justify-between items-center mb-[49px]">
                     <div className="flex flex-row items-center gap-4">
-                        {titleIcon &&  <Image src={titleIcon} alt="ícone" width={16} height={16} />}
+                        {titleIcon && <Image src={titleIcon} alt="ícone" width={16} height={16} />}
                         <h2 className="text-gray-500">{title}</h2>
                     </div>
                     <button onClick={onClose}>
@@ -28,8 +29,8 @@ export default function Modal({ isOpen, onClose, title, children, buttonTitle, t
                 <div className="mb-4">{children}</div>
                 {buttonTitle && (
                     <button
-                        onClick={onClose}
-                        className="bg-primary-orange text-white text-sm rounded hover:opacity-90 transition-opacity duration-200  h-11 w-full"
+                        onClick={onConfirm ? onConfirm : onClose}
+                        className="bg-primary-orange text-white text-sm rounded hover:opacity-90 transition-opacity duration-200 h-11 w-full"
                     >
                         {buttonTitle}
                     </button>

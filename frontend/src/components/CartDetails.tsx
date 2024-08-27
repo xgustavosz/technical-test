@@ -1,3 +1,5 @@
+import { useCart } from "@/contexts/CartContext";
+
 interface CartDetailsProps {
     cart: {
         id: string;
@@ -9,13 +11,16 @@ interface CartDetailsProps {
         imageSrc: string;
         quantity: number;
     }[];
+    onCheckout: () => void;
 }
 
-export default function CartDetails({ cart }: CartDetailsProps) {
+export default function CartDetails({ cart, onCheckout }: CartDetailsProps) {
+    const { clearCart } = useCart();
+
     const subtotal = cart.reduce((total, item) => {
-        const price = item.discountedPrice 
-          ? parseFloat(item.discountedPrice.replace("R$", "").replace(".", "").replace(",", "."))
-          : parseFloat(item.originalPrice.replace("R$", "").replace(".", "").replace(",", "."));
+        const price = item.discountedPrice
+            ? parseFloat(item.discountedPrice.replace("R$", "").replace(".", "").replace(",", "."))
+            : parseFloat(item.originalPrice.replace("R$", "").replace(".", "").replace(",", "."));
         return total + price * item.quantity;
     }, 0);
 
@@ -44,7 +49,14 @@ export default function CartDetails({ cart }: CartDetailsProps) {
                 <p className="text-gray-500">Valor total:</p>
                 <p className="font-semibold text-[1.375rem]">R$ {subtotal.toFixed(2).replace(".", ",")}</p>
             </div>
-            <button className="w-full h-11 rounded-[4px] text-white bg-primary-orange text-sm hover:opacity-90 transition-opacity duration-200">
+            <button
+                onClick={() => {
+                    onCheckout()
+                    clearCart()
+                }
+                }
+                className="w-full h-11 rounded-[4px] text-white bg-primary-orange text-sm hover:opacity-90 transition-opacity duration-200"
+            >
                 Finalizar Pedido
             </button>
         </div>
