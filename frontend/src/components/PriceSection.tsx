@@ -1,12 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Range, getTrackBackground } from 'react-range';
 
-export default function PriceSection() {
+export default function PriceSection({ onPriceChange }: { onPriceChange: (values: number[]) => void }) {
     const [values, setValues] = useState([0, 10000]);
     const MIN = 0;
     const MAX = 10000;
+
+    useEffect(() => {
+        onPriceChange(values);
+    }, [values, onPriceChange]);
 
     const handleChange = (values: number[]) => {
         setValues(values);
