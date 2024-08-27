@@ -1,4 +1,4 @@
-import { useCart } from "@/contexts/CartContext";
+'use client';
 
 interface CartDetailsProps {
     cart: {
@@ -15,8 +15,6 @@ interface CartDetailsProps {
 }
 
 export default function CartDetails({ cart, onCheckout }: CartDetailsProps) {
-    const { clearCart } = useCart();
-
     const subtotal = cart.reduce((total, item) => {
         const price = item.discountedPrice
             ? parseFloat(item.discountedPrice.replace("R$", "").replace(".", "").replace(",", "."))
@@ -51,11 +49,7 @@ export default function CartDetails({ cart, onCheckout }: CartDetailsProps) {
                 <p className="font-semibold text-[1.375rem]">R$ {subtotal.toFixed(2).replace(".", ",")}</p>
             </div>
             <button
-                onClick={() => {
-                    onCheckout()
-                    clearCart()
-                }
-                }
+                onClick={onCheckout}
                 className="w-full h-11 rounded-[4px] text-white bg-primary-orange text-sm hover:opacity-90 transition-opacity duration-200"
             >
                 Finalizar Pedido

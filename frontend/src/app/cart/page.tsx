@@ -5,12 +5,12 @@ import CartItem from "@/components/CartItem";
 import Container from "@/components/Container";
 import CartDetails from "@/components/CartDetails";
 import RegisterModal from "@/components/RegisterModal";
-import OrderCompletedModal from "@/components/OrderCompletedModal"; // Adicione o caminho correto para seu modal
+import OrderCompletedModal from "@/components/OrderCompletedModal";
 import { useCart } from "@/contexts/CartContext";
 import { useAuth } from '@/contexts/AuthContext';
 
 export default function Cart() {
-    const { cart } = useCart();
+    const { cart, clearCart } = useCart();
     const { user } = useAuth();
     const [isOrderCompletedModalOpen, setOrderCompletedModalOpen] = useState(false);
     const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);
@@ -29,6 +29,7 @@ export default function Cart() {
 
     const handleCloseOrderCompletedModal = () => {
         setOrderCompletedModalOpen(false);
+        clearCart();
     };
 
     return (
